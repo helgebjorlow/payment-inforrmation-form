@@ -1,0 +1,63 @@
+
+
+.form-container {
+  display:block;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+  border: 2px solid grey;
+  border-radius: 8px;
+  text-align:center;
+  padding: 5px;
+  margin-top: 40px;
+}
+
+.Button {
+  margin:auto;
+  margin: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.react-datepicker-wrapper input {
+  border: 1px solid lightgrey;
+  border-radius: .25rem;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  max-width: 120px;
+  color: rgb(119, 119, 119);
+}
+
+.form-select input {
+  color: rgb(119, 119, 119);
+}
+
+.card-table-container {
+  margin-top: 25px;
+  max-width: 400px;
+}
+.card-table {
+  max-width: 400px;
+}
+
+#alert-override {
+  height: 50%
+}
+
+span {
+  display: block;
+  float: left;
+}
+
+input {
+  margin-top: 15px;
+}
+select {
+  margin-top: 15px
+}
