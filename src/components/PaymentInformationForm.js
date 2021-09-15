@@ -30,39 +30,43 @@ const PaymentInformationForm = () => {
               </Alert> : <Alert className="alert-dismissible small fade show p-2" variant="info">Input your card information.</Alert>}
             </Col>
           </Row>
-          <Row>
-            <Col>
-            {/* Conditional rendering of error-icon */}
-            {(errors.location.indexOf("cardHolderName") > -1) ? 
+                                {/* Conditional rendering of error-icon */}
+                                {(errors.location.indexOf("cardHolderName") > -1) ? 
             <span style={{fontSize: "10px"}}>
-            <i className="fa fa-xs fa-exclamation-triangle"></i>
+            <i className="placement fa fa-xs fa-exclamation-triangle"></i>
             </span> : ""}
+
+          <Row>
+
+            <Col>
+
             <CardHolderName handleChange={handleChange}/>
             </Col>
           </Row>
+          {(errors.location.indexOf("cardNumber") > -1) ? 
+            <span style={{fontSize: "10px"}}>
+            <i className="placement fa fa-xs fa-exclamation-triangle"></i>
+            </span> : ""}
           <Row>
             <Col>
-              {(errors.location.indexOf("cardNumber") > -1) ? 
-            <span style={{fontSize: "10px"}}>
-            <i className="fa fa-xs fa-exclamation-triangle"></i>
-            </span> : ""}
+
             <CardNumber  handleChange={handleChange}/>
             </Col>
           </Row>
-          <Row>
-            <Col>
+          <Row className="h-specified">
+            <Col h-5>
             {(errors.location.indexOf("ccvCode") > -1) ? 
             <span style={{fontSize: "10px"}}>
             <i className="fa fa-xs fa-exclamation-triangle"></i>
             </span> : ""}
             <CcvCode handleChange={handleChange}/>
             </Col>
-            <Col>
+            <Col className={(errors.location.indexOf("cardExpiration") > -1) ? "transform-up" : ""}>
             {(errors.location.indexOf("cardExpiration") > -1) ? 
-            <span style={{fontSize: "10px"}}>
-            <i className="fa fa-xs fa-exclamation-triangle"></i>
+            <span className={(errors.location.indexOf("cardExpiration") > -1) ? "placement-error" : ""}  style={{fontSize: "10px"}}>
+            <i className=" fa fa-xs fa-exclamation-triangle"></i>
             </span> : ""}
-            <CardExpiration handleChange={handleChange} values={values}/>
+            <CardExpiration  handleChange={handleChange} values={values}/>
             </Col>
             <Col>
             {(errors.location.indexOf("cardType") > -1) ? 
